@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Clients from "../template/views/clients/Clients.vue";
 import Points from "../template/views/points/Points.vue";
 import Prizes from "../template/views/prizes/Prizes.vue";
+import Redemptions from "../template/views/redemptions/Redemptions.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/premios",
     name: "Premios",
     component: Prizes,
+  },
+  {
+    path: "/resgates",
+    name: "Resgates",
+    component: Redemptions,
   },
 ];
 
