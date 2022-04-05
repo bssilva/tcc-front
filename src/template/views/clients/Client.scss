@@ -1,3 +1,25 @@
 #client {
   width: 100%;
+  .v-data-table {
+    margin: 0 50px;
+    border-radius: 10px;
+    background-color: #3737374d;
+    color: #fff;
+    .text-start {
+      color: #fff !important;
+      text-align: center;
+    }
+    .v-select__slot {
+      .v-select__selections,
+      .v-select__selection,
+      .v-icon {
+        color: #fff;
+      }
+    }
+    tr {
+      &:hover {
+        background-color: unset !important;
+      }
+    }
+  }
 }
