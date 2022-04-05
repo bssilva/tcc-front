@@ -1,0 +1,41 @@
+#side-bar-close {
+  .v-card {
+    height: 100%;
+    .v-navigation-drawer {
+      background-color: #3a6f51;
+      .v-icon {
+        color: #fff !important;
+      }
+      .logo-main {
+        padding: 0 8px;
+      }
+      .v-btn {
+        margin-left: auto;
+      }
+      .v-list {
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        .v-list-item {
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: unset;
+          &:nth-child(7) {
+            margin-top: auto;
+          }
+          .v-list-item__title {
+            font-size: 15px;
+            font-family: montserrat;
+            font-weight: bold;
+            color: #fff;
+          }
+          .v-list-item__content {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}

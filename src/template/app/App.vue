@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <SideBar />
+    <router-view />
   </div>
 </template>
 

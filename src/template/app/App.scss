@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+@font-face {
+  font-family: "LibreFont";
+  src: url("../../assets/fonts/libre-font.ttf");
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/montserrat.ttf");
+}
+#app {
+  height: 100vh;
+  display: flex;
+  background-color: #585858;
+  #side-bar,
+  #side-bar-close {
+    height: 100%;
+    .v-card {
+      background-color: #cae0bc;
+    }
+  }
+}

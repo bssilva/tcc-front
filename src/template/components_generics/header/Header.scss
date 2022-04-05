@@ -1,0 +1,23 @@
+.header {
+  background-color: #373737;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  h1 {
+    color: #fff;
+    font-family: "montserrat";
+    font-size: 20px;
+  }
+  .v-btn {
+    background-color: #1b5525 !important;
+    span {
+      text-transform: capitalize;
+      font-family: "montserrat";
+      color: #fff;
+    }
+    &:hover {
+      background-color: #32c049 !important;
+    }
+  }
+}
