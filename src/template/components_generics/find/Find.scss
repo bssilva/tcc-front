@@ -1,0 +1,44 @@
+#find {
+  margin: 30px 50px;
+  border-radius: 10px;
+  background-color: #3737374d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  .label-input {
+    width: 100%;
+    .v-label {
+      font-family: "montserrat";
+      color: #fff;
+    }
+    .v-text-field {
+      margin-top: 10px;
+      .v-input__control {
+        min-height: 25px;
+        .v-input__slot {
+          border-radius: 10px;
+          background-color: #d3d3d3;
+        }
+      }
+      .v-text-field__details {
+        display: none;
+      }
+      #input-37 {
+        font-family: "montserrat";
+      }
+    }
+  }
+  .v-btn {
+    margin: 18px 30px 0 0;
+    background-color: #1b5525;
+    span {
+      text-transform: capitalize;
+      color: #fff;
+      font-family: "montserrat";
+    }
+    &:hover {
+      background-color: #32c049 !important;
+    }
+  }
+}

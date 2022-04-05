@@ -1,6 +1,8 @@
 <template>
   <div id="point">
     <Header :title="'Pontos'" :nameButton="'Inserir pontos'" />
+
+    <Find :label="'Pesquisar pontos :'" />
   </div>
 </template>
 

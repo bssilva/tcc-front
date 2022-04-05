@@ -1,6 +1,7 @@
 <template>
   <div id="redemption">
     <Header :title="'Resgates'" :nameButton="'Realizar resgate'" />
+    <Find :label="'Pesquisar resgates :'" />
   </div>
 </template>
 
