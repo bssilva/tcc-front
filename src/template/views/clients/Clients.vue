@@ -1,7 +1,7 @@
 <template>
   <div id="client">
     <Header :title="'Clientes'" :nameButton="'Cadastrar clientes'" />
-    <Find :label="'Pesquisar clientes :'" />
+    <Find :label="'Pesquisar cliente :'" />
 
     <Table
       :headers="ClientModelTable.headers"
