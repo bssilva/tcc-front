@@ -1,11 +1,8 @@
 <template>
-  <div id="client">
-    <Header :title="'Clientes'" :nameButton="'Cadastrar clientes'" />
-    <Find :label="'Pesquisar cliente :'" />
-
-    <Table
-      :headers="ClientModelTable.headers"
-      :items="ClientModelTable.items"
+  <div id="client-view">
+    <Clients
+      :headersTable="ClientModelTable.headers"
+      :itemsTable="ClientModelTable.items"
     />
   </div>
 </template>
