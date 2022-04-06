@@ -22,17 +22,18 @@
           <v-divider></v-divider>
 
           <v-list dense>
-            <router-link :to="item.to" v-for="item in items" :key="item.title">
-              <v-list-item link>
-                <v-list-item-icon>
-                  <v-icon>{{ item.icon }}</v-icon>
-                </v-list-item-icon>
-
-                <v-list-item-content>
-                  <v-list-item-title> {{ item.title }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </router-link>
+            <v-list-item link v-for="item in items" :key="item.title">
+              <v-list-item-icon>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-icon>
+              <div class="redirect">
+                <router-link :to="item.to">
+                  <v-list-item-content>
+                    <v-list-item-title> {{ item.title }}</v-list-item-title>
+                  </v-list-item-content>
+                </router-link>
+              </div>
+            </v-list-item>
           </v-list>
         </v-navigation-drawer>
       </v-card>
