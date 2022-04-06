@@ -1,7 +1,7 @@
 <template>
   <div id="prize">
     <Header :title="'Prêmios'" :nameButton="'Inserir prêmios'" />
-    <Find :label="'Pesquisar prêmios :'" />
+    <Find :label="'Pesquisar prêmio :'" />
     <Table
       :headers="PrizesModelTable.headers"
       :items="PrizesModelTable.items"
