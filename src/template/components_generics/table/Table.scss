@@ -1,0 +1,32 @@
+.v-data-table {
+  margin: 0 50px;
+  border-radius: 10px;
+  background-color: #3737374d !important;
+  color: #fff;
+  .v-data-table-header {
+    span {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+  .text-start {
+    color: #fff !important;
+    text-align: center;
+  }
+  .v-select__slot {
+    .v-select__selections,
+    .v-select__selection,
+    .v-icon {
+      color: #fff !important;
+    }
+  }
+  .v-data-footer__select,
+  .v-data-footer__pagination {
+    color: #fff !important;
+  }
+  tr {
+    &:hover {
+      background-color: unset !important;
+    }
+  }
+}

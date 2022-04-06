@@ -3,10 +3,10 @@
     <Header :title="'Clientes'" :nameButton="'Cadastrar clientes'" />
     <Find :label="'Pesquisar clientes :'" />
 
-    <v-data-table
+    <Table
       :headers="ClientModelTable.headers"
       :items="ClientModelTable.items"
-    ></v-data-table>
+    />
   </div>
 </template>
 
