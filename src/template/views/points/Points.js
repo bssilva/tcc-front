@@ -1,7 +1,7 @@
 import { PointsModelTable } from "./_models/PointsModelTable";
-
+import Points from "../../componets/points/Points.vue";
 export default {
-  name: "Points",
+  components: { Points },
   data: () => ({
     PointsModelTable,
   }),

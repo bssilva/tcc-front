@@ -1,10 +1,8 @@
 <template>
-  <div id="point">
-    <Header :title="'Pontos'" :nameButton="'Inserir pontos'" />
-    <Find :label="'Pesquisar cliente :'" />
-    <Table
-      :headers="PointsModelTable.headers"
-      :items="PointsModelTable.items"
+  <div id="point-view">
+    <Points
+      :headersTable="PointsModelTable.headers"
+      :itemsTable="PointsModelTable.items"
     />
   </div>
 </template>
