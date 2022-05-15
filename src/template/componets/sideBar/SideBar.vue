@@ -9,9 +9,9 @@
         >
           <v-list-item class="logo-main">
             <v-list-item-avatar>
-              <v-img
-                src="https://randomuser.me/api/portraits/men/85.jpg"
-              ></v-img>
+              <v-btn>
+                <span class="mdi mdi-menu"></span>
+              </v-btn>
             </v-list-item-avatar>
 
             <v-btn icon @click.stop="mini = !mini">
