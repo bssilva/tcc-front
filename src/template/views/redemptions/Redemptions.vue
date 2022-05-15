@@ -1,10 +1,8 @@
 <template>
   <div id="redemption">
-    <Header :title="'Resgates'" :nameButton="'Realizar resgate'" />
-    <Find :label="'Pesquisar resgates :'" />
-    <Table
-      :headers="RedemptionsModelTable.headers"
-      :items="RedemptionsModelTable.items"
+    <Redemptions
+      :headersTable="RedemptionsModelTable.headers"
+      :itemsTable="RedemptionsModelTable.items"
     />
   </div>
 </template>
