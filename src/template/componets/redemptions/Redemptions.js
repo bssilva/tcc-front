@@ -3,7 +3,8 @@ export default {
   props: ["headersTable", "itemsTable"],
   data: () => ({
     dialog: false,
-    redemptionsForRegister: {}
+    redemptionsForRegister: {},
+    searchObject: []
   }),
   methods: {
     fillModal(){

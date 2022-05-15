@@ -5,8 +5,8 @@
       :nameButton="'Inserir pontos'"
       :callback="fillModal"
     />
-    <Find :label="'Pesquisar cliente :'" :items="itemsTable" v-model="objetoBuscado"/>
-    <Table :headers="headersTable" :items="objetoBuscado.length > 0 ? objetoBuscado : itemsTable" />
+    <Find :label="'Pesquisar cliente :'" :items="itemsTable" v-model="searchObject"/>
+    <Table :headers="headersTable" :items="searchObject.length > 0 ? searchObject : itemsTable" />
 
     <v-dialog v-model="dialog" max-width="500">
       <v-card>

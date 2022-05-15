@@ -5,8 +5,8 @@
       :nameButton="'Cadastrar prẽmio'"
       :callback="fillModal"
     />
-    <Find :label="'Pesquisar prêmio :'" />
-    <Table :headers="headersTable" :items="itemsTable" />
+    <Find :label="'Pesquisar prêmio :'" :items="itemsTable" v-model="searchObject"/>
+    <Table :headers="headersTable" :items="searchObject.length > 0 ? searchObject : itemsTable" />
 
     <v-dialog v-model="dialog" max-width="500">
       <v-card>

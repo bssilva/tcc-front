@@ -3,7 +3,8 @@ export default {
   props: ["headersTable", "itemsTable"],
   data: () => ({
     dialog: false,
-    prizes: {}
+    prizes: {},
+    searchObject: []
   }),
   methods: {
     fillModal(){

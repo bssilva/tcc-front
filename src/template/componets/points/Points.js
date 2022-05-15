@@ -4,10 +4,8 @@ export default {
   data: () => ({
     dialog: false,
     points: {},
-    objetoBuscado: []
+    searchObject: []
   }),
-  created(){
-  },
   methods: {
     fillModal(){
       this.dialog = !this.dialog
