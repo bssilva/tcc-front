@@ -8,7 +8,7 @@ export const ClientModelTable = {
   ],
   items: [
     {
-      name: "Bruno Santos da Silva",
+      name: "Diego Henrique",
       cpf: "123.456.789-09",
       email: "19/07/1999",
       balance: "19/07/1999",

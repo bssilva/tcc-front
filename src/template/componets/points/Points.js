@@ -3,8 +3,11 @@ export default {
   props: ["headersTable", "itemsTable"],
   data: () => ({
     dialog: false,
-    points: {}
+    points: {},
+    objetoBuscado: []
   }),
+  created(){
+  },
   methods: {
     fillModal(){
       this.dialog = !this.dialog

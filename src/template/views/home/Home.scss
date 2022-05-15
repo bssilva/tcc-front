@@ -1,0 +1,29 @@
+#home {
+    padding: 20px;
+    .title {
+        font-family: "montserrat";
+        color: #fff;
+        font-size: 25px;
+    }
+    .all-box {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            text-decoration: none;
+        }
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            min-width: 400px;
+            margin: 40px 60px;
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #373737;
+            color: #FFF;
+            text-align: center;
+        }
+    }
+}

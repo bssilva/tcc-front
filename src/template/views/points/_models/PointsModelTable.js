@@ -7,16 +7,16 @@ export const PointsModelTable = {
   ],
   items: [
     {
-      cpf: "123.456.789-09",
-      value: "120",
-      date: "15/05/2022",
+      cpf: "11111111111",
+      value: "333",
+      date: "x",
       description: "Inserção manual",
     },
     {
-      cpf: "123.456.789-09",
-      value: "120",
-      date: "15/05/2022",
-      description: "Inserção manual",
+      cpf: "222222222",
+      value: "444",
+      date: "x",
+      description: "Diferente",
     },
   ],
 };
