@@ -1,7 +1,7 @@
 import { PrizesModelTable } from "./_models/PrizesModelTable";
-
+import Prizes from "../../componets/prizes/Prizes.vue";
 export default {
-  name: "Prizes",
+  components: { Prizes },
   data: () => ({
     PrizesModelTable,
   }),
