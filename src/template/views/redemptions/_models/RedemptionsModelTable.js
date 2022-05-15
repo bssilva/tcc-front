@@ -1,6 +1,6 @@
 export const RedemptionsModelTable = {
   headers: [
-    { text: "Nome do cliente", value: "name" },
+    { text: "CPF", value: "name" },
     { text: "Nome do prêmio", value: "prizeName" },
     { text: "Valor (em pontos)", value: "value" },
     { text: "Data do resgate", value: "redemptionDate" },

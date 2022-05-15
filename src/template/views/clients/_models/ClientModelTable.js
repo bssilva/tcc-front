@@ -2,18 +2,24 @@ export const ClientModelTable = {
   headers: [
     { text: "Nome", value: "name" },
     { text: "CPF", value: "cpf" },
-    { text: "Data de nascimento", value: "birthDate" },
+    { text: "Email", value: "email" },
+    { text: "Saldo de pontos", value: "balance" },
+    { text: "Celular", value: "cellphone" },
   ],
   items: [
     {
       name: "Bruno Santos da Silva",
       cpf: "123.456.789-09",
-      birthDate: "19/07/1999",
+      email: "19/07/1999",
+      balance: "19/07/1999",
+      cellphone: "19/07/1999",
     },
     {
-      name: "Bruno da Silva Santos",
+      name: "Bruno Santos da Silva",
       cpf: "123.456.789-09",
-      birthDate: "19/07/1999",
-    },
+      email: "19/07/1999",
+      balance: "19/07/1999",
+      cellphone: "19/07/1999",
+    }
   ],
 };

@@ -1,19 +1,22 @@
 export const PointsModelTable = {
   headers: [
-    { text: "Nome", value: "name" },
     { text: "CPF", value: "cpf" },
-    { text: "Saldo de pontos", value: "balance" },
+    { text: "Valor", value: "value" },
+    { text: "Data da inserção", value: "date" },
+    { text: "Descrição", value: "description" },
   ],
   items: [
     {
-      name: "Bruno Santos da Silva",
       cpf: "123.456.789-09",
-      balance: "50.000,00",
+      value: "120",
+      date: "15/05/2022",
+      description: "Inserção manual",
     },
     {
-      name: "Diego Henrique Lauar",
       cpf: "123.456.789-09",
-      balance: "50.000,00",
+      value: "120",
+      date: "15/05/2022",
+      description: "Inserção manual",
     },
   ],
 };

@@ -4,7 +4,7 @@
       <h1>{{ title }}</h1>
     </div>
     <div class="btn-header">
-      <v-btn>{{ nameButton }}</v-btn>
+      <v-btn @click="callback">{{ nameButton }}</v-btn>
     </div>
   </div>
 </template>

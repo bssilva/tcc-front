@@ -21,3 +21,30 @@ body {
     }
   }
 }
+.v-dialog {
+  .v-card {
+    background-color: #373737 !important;
+    .v-card__title {
+      font-family: "montserrat" !important;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .v-label {
+      color: #fff !important;
+    }
+    .v-text-field{
+      margin-top: 10px;
+      .v-input__slot{
+        background-color: #585858 !important;
+        input{
+          color: #fff !important
+        }
+      }
+    }
+  }
+}
+body::-webkit-scrollbar {
+  width: 2px;
+  background-color: #585858;
+}

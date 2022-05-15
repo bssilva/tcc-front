@@ -1,4 +1,4 @@
 export default {
   name: "Header",
-  props: ["title", "nameButton"],
+  props: ["title", "nameButton", "callback"],
 };
