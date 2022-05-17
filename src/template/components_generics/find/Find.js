@@ -12,7 +12,7 @@ export default {
             this.search
               .toLowerCase()
               .split(" ")
-              .every((v) => item[keyOfObject].toLowerCase().includes(v))
+              .every((v) => item[keyOfObject].toString().toLowerCase().includes(v))
           ) {
             return item;
           }

@@ -5,12 +5,13 @@ export const ClientModelTable = {
     { text: "Email", value: "email" },
     { text: "Saldo de pontos", value: "balance" },
     { text: "Celular", value: "cellphone" },
+    { text: "Ações", value: "actions", sortable: false },
   ],
   items: [
     {
       name: "Diego Henrique",
       cpf: "123.456.789-09",
-      email: "19/07/1999",
+      email: "18/07/1999",
       balance: "19/07/1999",
       cellphone: "19/07/1999",
     },

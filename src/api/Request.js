@@ -14,6 +14,7 @@ async function baseRequest(method, route, options) {
     method,
     headers
   }, { body } || {}));
+  console.log(resp)
   const json = await resp.json();
   if (json.status != 200 && json.status != 201 && json.status && !options?.body.saldo)
     window?.VueContext?.$toasted?.global.error({ ...json, msg: json.mensagem });
@@ -24,3 +25,4 @@ async function baseRequest(method, route, options) {
 export const get = (route, options) => baseRequest('GET', route, options);
 export const post = (route, options) => baseRequest('POST', route, options);
 export const put = (route, options) => baseRequest('PUT', route, options);
+export const del = (route, options) => baseRequest('DELETE', route, options);

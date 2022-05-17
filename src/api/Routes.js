@@ -1,4 +1,4 @@
-import { get, post, put } from './Request';
+import { get, post, put, del } from './Request';
 
 export const routesApi = {
   establishment: {
@@ -6,6 +6,8 @@ export const routesApi = {
   prize: {
   },
   client: {
+    getCustomer: () => get('customer/establishmentId'),
+    deleteCustomer: (cpf) => del(`customer/${cpf}`)
   },
   redemption: {
   },

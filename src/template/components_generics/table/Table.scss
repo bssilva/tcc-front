@@ -3,8 +3,17 @@
   border-radius: 10px;
   background-color: #3737374d !important;
   color: #fff;
+  .v-data-footer__select{
+    display: none;
+  }
   span {
     font-family: "montserrat" !important;
+  }
+  .v-icon{
+    color: #fff !important;
+  }
+  .v-data-footer{
+    justify-content: flex-end;
   }
   .v-data-table-header {
     span {

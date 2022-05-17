@@ -5,5 +5,12 @@ export default {
   components: { Clients },
   data: () => ({
     ClientModelTable,
+    dataCustomer: null,
+    loading: false
   }),
+  async created(){
+    this.loading = true;
+    this.dataCustomer = await this.API.client.getCustomer();
+    this.loading = false;
+  }
 };

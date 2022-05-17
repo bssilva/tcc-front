@@ -4,6 +4,7 @@ import vuetify from "./plugins/vuetify";
 import router from "./router";
 import "./config/GlobalComponents";
 import "./config/GlobalVariables";
+import "./config/VueToasted"
 
 Vue.config.productionTip = false;
 

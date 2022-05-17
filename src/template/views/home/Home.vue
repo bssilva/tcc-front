@@ -1,8 +1,12 @@
 <template>
   <div id="home">
     <div class="div-title">
-      <h1 class="title">Seja bem vindo, Nome do estabelecimento</h1>
+      <h1 class="title">Seja bem vindo, <span>Nome do estabelecimento</span></h1>
+      <h2>Gerenciamento de Programa de Fidelidade</h2>
     </div>
+
+    <v-text-field type="date" v-model="date"></v-text-field>
+
     <div class="all-box">
       <router-link to="/clientes">
         <div class="box1">

@@ -1,8 +1,8 @@
 <template>
-  <div id="client-view">
+  <div id="client-view" v-if="!loading">
     <Clients
       :headersTable="ClientModelTable.headers"
-      :itemsTable="ClientModelTable.items"
+      :itemsTable="dataCustomer.length > 0 ? dataCustomer : ClientModelTable.items"
     />
   </div>
 </template>
