@@ -11,9 +11,10 @@ export default {
   }),
   methods: {
     callbackConfirm(type) {
+      this.dialogDelete = false;
+      this.dialogUpdate = false;
       if (type == "delete") this.callbackDelete(this.guardKey);
       else this.callbackUpdate();
-      this.dialogDelete = false;
     },
     openModal(item, type) {
       this.guardKey = item;

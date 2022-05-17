@@ -26,7 +26,7 @@ export default {
       if(resp.statusCode == 201){
         this.$toasted.global.success({ msg: `Cliente ${this.customer.name} criado com sucesso!` });
         this.itemsTable.push(this.customer)
-        this.dialog = !this.dialog
+        this.dialog = false
       }
       if(resp.statusCode == 400){
         this.$toasted.global.error({ msg: 'Cliente ja cadastrado !' });
