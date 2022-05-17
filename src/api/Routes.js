@@ -2,7 +2,10 @@ import { get, post, put, del } from "./Request";
 
 export const routesApi = {
   establishment: {},
-  prize: {},
+  prize: {
+    postPrize: (body) => post("premium", { body }),
+    getPrize: () => get("premium"),
+  },
   client: {
     getCustomer: () => get("customer/establishmentId"),
     deleteCustomer: (cpf) => del(`customer/${cpf}`),

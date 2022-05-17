@@ -2,7 +2,7 @@
   <div id="prize">
     <Header
       :title="'Prêmios'"
-      :nameButton="'Cadastrar prẽmio'"
+      :nameButton="'Cadastrar prêmio'"
       :callback="fillModal"
     />
     <Find :label="'Pesquisar prêmio :'" :items="itemsTable" v-model="searchObject"/>
@@ -21,7 +21,7 @@
             <v-label>Valor (em pontos)</v-label>
             <v-text-field solo v-model="prizes.value"></v-text-field>
             <v-label>Imagem</v-label>
-            <v-text-field solo v-model="prizes.image"></v-text-field>
+            <v-text-field type="file" solo v-model="prizes.image"></v-text-field>
             <v-label>Status</v-label>
             <v-text-field solo v-model="prizes.status"></v-text-field>
           </v-form>
@@ -32,7 +32,7 @@
           <v-btn color="green darken-1" text @click="dialog = false">
             Cancelar
           </v-btn>
-          <v-btn color="green darken-1" text @click="insertPoints">
+          <v-btn color="green darken-1" text @click="insertPrizes">
             Salvar
           </v-btn>
         </v-card-actions>

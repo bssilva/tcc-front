@@ -10,8 +10,9 @@ export default {
     fillModal(){
       this.dialog = !this.dialog
     },
-    insertPrizes(){
-      console.log(this.prizes)
+    async insertPrizes(){
+      const teste = await this.API.prize.postPrize(this.prizes)
+      console.log(this.teste)
     }
   }
 };
