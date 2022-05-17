@@ -2,7 +2,7 @@
   <div id="point-view">
     <Points
       :headersTable="PointsModelTable.headers"
-      :itemsTable="PointsModelTable.items"
+      :itemsTable="dataPoints.length > 0 ? dataPoints : PointsModelTable.items"
     />
   </div>
 </template>

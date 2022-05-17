@@ -1,22 +1,17 @@
 export const PointsModelTable = {
   headers: [
+    { text: "Nome", value: "name" },
     { text: "CPF", value: "cpf" },
     { text: "Valor", value: "value" },
-    { text: "Data da inserção", value: "date" },
+    { text: "Data da inserção", value: "createdDate" },
     { text: "Descrição", value: "description" },
   ],
   items: [
     {
-      cpf: "11111111111",
-      value: "333",
-      date: "x",
+      cpf: "123.456.789.09",
+      value: 20,
+      createdDate: "x",
       description: "Inserção manual",
-    },
-    {
-      cpf: "222222222",
-      value: "444",
-      date: "x",
-      description: "Diferente",
-    },
+    }
   ],
 };

@@ -9,6 +9,9 @@ export const routesApi = {
     postCustomer: (body) => post("customer", { body }),
     updateCustomer: (body) => put(`customer/${body.cpf}`, { body }),
   },
+  points: {
+    getPoints: () => get("point"),
+    postPoints: (body) => post("point", { body }),
+  },
   redemption: {},
-  points: {},
 };
