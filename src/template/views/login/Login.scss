@@ -1,0 +1,61 @@
+#login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-login{
+        .v-card{
+            background-color: #303030;
+            padding: 20px 40px;
+
+            h1,h2{
+                color: #fff;
+                font-family: montserrat;
+                text-align: center;
+            }
+
+            h1{
+                font-size: 25px;
+            }
+            h2{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .v-label{
+                color: #fff;
+                font-family: montserrat;
+            }
+
+            .v-text-field{
+                margin-top: 5px;
+                .v-input__slot{
+                    background-color: #585858;
+                    input{
+                        color: #fff;
+                    }
+                }
+                border-radius: 10px;
+            }
+
+            .buttons{
+                display: flex;
+                justify-content: flex-end;
+                .v-btn{
+                    background-color: #2e5626;
+                    border-radius: 10px;
+                    span{
+                        color: #fff;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        border: 2px solid #2e5626;
+                        span{
+                            color: #2e5626;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
