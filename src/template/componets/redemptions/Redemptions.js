@@ -4,11 +4,11 @@ export default {
   data: () => ({
     dialog: false,
     redemption: {},
-    searchObject: []
+    searchObject: [],
+    prizes: []
   }),
   async created(){
-    const prizes = await this.API.prize.getPrize()
-    console.log(prizes)
+    this.prizes = await this.API.prize.getPrize()
   },
   methods: {
     fillModal(){

@@ -6,6 +6,9 @@ export default {
     prizes: {},
     searchObject: []
   }),
+  async created(){
+    await this.API.prize.getPrize()
+  },
   methods: {
     fillModal(){
       this.dialog = !this.dialog
