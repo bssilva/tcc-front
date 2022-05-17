@@ -3,8 +3,8 @@
 
     <v-data-table :headers="headers" :items="items" :items-per-page="5">
       <template v-slot:item.actions="{ item }">
-        <v-icon small class="mr-2"> mdi-pencil </v-icon>
-        <v-icon small @click="openModal(item.cpf)"> mdi-delete </v-icon>
+        <v-icon small @click="openModal(item, 'update')" class="mr-2"> mdi-pencil </v-icon>
+        <v-icon small @click="openModal(item, 'delete')"> mdi-delete </v-icon>
       </template>
     </v-data-table>
 
@@ -13,7 +13,17 @@
         <h1>Confirma solicitação de exclusão ?</h1>
         <div class="buttons">
           <v-btn @click="dialogDelete = false">Cancelar</v-btn>
-          <v-btn @click="callbackConfirm(guardKey)">Confirmar</v-btn>
+          <v-btn @click="callbackConfirm('delete')">Confirmar</v-btn>
+        </div>
+      </div>
+    </v-dialog>
+
+     <v-dialog v-model="dialogUpdate" max-width="700px">
+      <div class="dialog-update">
+        <slot name="updateForm" />
+        <div class="buttons">
+          <v-btn @click="dialogUpdate = false">Cancelar</v-btn>
+          <v-btn @click="callbackConfirm('update')">Confirmar</v-btn>
         </div>
       </div>
     </v-dialog>

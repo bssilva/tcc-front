@@ -5,6 +5,7 @@ import router from "./router";
 import "./config/GlobalComponents";
 import "./config/GlobalVariables";
 import "./config/VueToasted"
+import "./config/V-mask"
 
 Vue.config.productionTip = false;
 

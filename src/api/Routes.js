@@ -1,16 +1,14 @@
-import { get, post, put, del } from './Request';
+import { get, post, put, del } from "./Request";
 
 export const routesApi = {
-  establishment: {
-  },
-  prize: {
-  },
+  establishment: {},
+  prize: {},
   client: {
-    getCustomer: () => get('customer/establishmentId'),
-    deleteCustomer: (cpf) => del(`customer/${cpf}`)
+    getCustomer: () => get("customer/establishmentId"),
+    deleteCustomer: (cpf) => del(`customer/${cpf}`),
+    postCustomer: (body) => post("customer", { body }),
+    updateCustomer: (body) => put(`customer/${body.cpf}`, { body }),
   },
-  redemption: {
-  },
-  points: {
-  },
+  redemption: {},
+  points: {},
 };

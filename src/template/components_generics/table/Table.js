@@ -1,17 +1,27 @@
+import { validateForm, mask } from "../../../assets/js/Utils";
+
 export default {
-  props: ["headers", "items", "callbackDelete"],
+  props: ["headers", "items", "callbackDelete", "callbackUpdate"],
   data: () => ({
     dialogDelete: false,
-    guardKey: null
+    dialogUpdate: false,
+    guardKey: null,
+    validateForm,
+    mask,
   }),
   methods: {
-    callbackConfirm(item){
-      this.callbackDelete(item)
-      this.dialogDelete = false
+    callbackConfirm(type) {
+      if (type == "delete") this.callbackDelete(this.guardKey);
+      else this.callbackUpdate();
+      this.dialogDelete = false;
     },
-    openModal(item){
-      this.guardKey = item
-      this.dialogDelete = true
-    }
-  }
+    openModal(item, type) {
+      this.guardKey = item;
+      if (type == "delete") this.dialogDelete = true;
+      else {
+        this.$emit('input', item)
+        this.dialogUpdate = true;
+      }
+    },
+  },
 };
