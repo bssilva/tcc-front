@@ -1,7 +1,13 @@
-import { API_URL, HEADERS } from './Constants';
+import { API_URL } from './Constants';
 
 async function baseRequest(method, route, options) {
-  const headers = { ...HEADERS };
+  const headers = {}
+  if(localStorage.getItem('establishmentId')){
+    headers = {
+      'Content-Type': 'application/json',
+      establishmentId: localStorage.getItem('establishmentId')
+    };
+  }
   let body;
   if (options?.file) {
     body = options?.body;

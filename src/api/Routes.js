@@ -1,7 +1,9 @@
 import { get, post, put, del } from "./Request";
 
 export const routesApi = {
-  establishment: {},
+  establishment: {
+    login: (body) => post("establishment/login", { body }),
+  },
   prize: {
     postPrize: (body) => post("premium", { body }),
     getPrize: () => get("premium"),

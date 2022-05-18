@@ -6,11 +6,11 @@
               <h2>Informe seus dados para continuar</h2>
 
               <v-label>Email</v-label>
-              <v-text-field solo></v-text-field>
+              <v-text-field solo v-model="login.email"></v-text-field>
               <v-label>Senha</v-label>
-              <v-text-field solo></v-text-field>
+              <v-text-field type="password" solo v-model="login.senha"></v-text-field>
 
-              <div class="buttons">
+              <div class="buttons" @click="sendLogin">
                   <v-btn>
                       Entrar
                   </v-btn>

@@ -1,5 +1,1 @@
-export const API_URL = 'http://localhost:3141/';
-export const HEADERS = {
-  'Content-Type': 'application/json',
-  establishmentId: '6282eeda848b25673d1ac9b5'
-};
+export const API_URL = 'http://localhost:3152/';

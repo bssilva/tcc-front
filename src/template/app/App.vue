@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div id="app">
-      <SideBar />
+      <SideBar v-if="!$route.path.includes('login')"/>
       <router-view />
     </div>
   </v-app>
