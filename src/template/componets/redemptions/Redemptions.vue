@@ -22,13 +22,32 @@
         <v-card-text>
           <v-form>
             <v-label>CPF do cliente</v-label>
-            <v-text-field solo v-model="redemption.cpd"></v-text-field>
+            <v-text-field
+              solo
+              :rules="validateForm.cpf"
+              v-mask="mask.cpf"
+              v-model="redemption.cpf"
+            ></v-text-field>
             <v-label>Escolha o prêmio</v-label>
-            <v-text-field solo v-model="redemption.id_premio"></v-text-field>
-            <v-label>Valor (em pontos)</v-label>
-            <v-select :items="prizes" label="Solo field" solo></v-select>
+            <v-select
+              :items="prizes"
+              item-text="name"
+              item-value="_id"
+              v-model="redemption.descriptionPremium"
+              label="Solo field"
+              solo
+            ></v-select>
+            <v-label>Valor unitário (em pontos)</v-label>
+            <v-text-field solo v-model="redemption.value"></v-text-field>
             <v-label>Quantidade</v-label>
-            <v-text-field solo v-model="redemption.qtd"></v-text-field>
+            <v-text-field
+              solo
+              type="number"
+              :rules="validateForm.points"
+              v-model="redemption.quantity"
+            ></v-text-field>
+            <v-label>Valor total (em pontos)</v-label>
+            <v-text-field solo v-model="redemption.valueTotal"></v-text-field>
           </v-form>
         </v-card-text>
 
@@ -37,7 +56,7 @@
           <v-btn color="green darken-1" text @click="dialog = false">
             Cancelar
           </v-btn>
-          <v-btn color="green darken-1" text @click="insertPoints">
+          <v-btn color="green darken-1" text @click="insertRedemption">
             Salvar
           </v-btn>
         </v-card-actions>
