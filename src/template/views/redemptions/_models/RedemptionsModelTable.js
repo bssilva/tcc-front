@@ -3,7 +3,7 @@ export const RedemptionsModelTable = {
     { text: "Nome", value: "name" },
     { text: "Nome do prêmio", value: "descriptionPremium" },
     { text: "Valor (em pontos)", value: "value" },
-    { text: "Quantidade", value: "qtd" },
+    { text: "Quantidade", value: "quantity" },
     { text: "Valor total", value: "total" },
     { text: "Data do resgate", value: "createdDate" },
   ],

@@ -18,5 +18,8 @@ export const routesApi = {
     getPoints: () => get("point"),
     postPoints: (body) => post("point", { body }),
   },
-  redemption: {},
+  redemption: {
+    getRedemptions: () => get("redemption"),
+    postRedemption: (body) => post("redemption", { body })
+  },
 };

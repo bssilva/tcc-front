@@ -34,11 +34,15 @@
               item-text="name"
               item-value="_id"
               v-model="redemption.descriptionPremium"
-              label="Solo field"
+              label="Selecionar"
               solo
             ></v-select>
             <v-label>Valor unitário (em pontos)</v-label>
-            <v-text-field solo v-model="redemption.value"></v-text-field>
+            <v-text-field
+              disabled
+              solo
+              v-model="redemption.value"
+            ></v-text-field>
             <v-label>Quantidade</v-label>
             <v-text-field
               solo
@@ -46,8 +50,14 @@
               :rules="validateForm.points"
               v-model="redemption.quantity"
             ></v-text-field>
-            <v-label>Valor total (em pontos)</v-label>
-            <v-text-field solo v-model="redemption.valueTotal"></v-text-field>
+            <div class="valor-total" v-if="redemption.quantity">
+              <v-label>Valor total (em pontos)</v-label>
+              <v-text-field
+                solo
+                :value="Number(redemption.value) * redemption.quantity"
+                disabled
+              ></v-text-field>
+            </div>
           </v-form>
         </v-card-text>
 
