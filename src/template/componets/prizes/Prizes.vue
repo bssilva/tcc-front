@@ -5,8 +5,15 @@
       :nameButton="'Cadastrar prêmio'"
       :callback="fillModal"
     />
-    <Find :label="'Pesquisar prêmio :'" :items="itemsTable" v-model="searchObject"/>
-    <Table :headers="headersTable" :items="searchObject.length > 0 ? searchObject : itemsTable" />
+    <Find
+      :label="'Pesquisar prêmio :'"
+      :items="itemsTable"
+      v-model="searchObject"
+    />
+    <Table
+      :headers="headersTable"
+      :items="searchObject.length > 0 ? searchObject : itemsTable"
+    />
 
     <v-dialog v-model="dialog" max-width="500">
       <v-card>
@@ -15,15 +22,37 @@
         <v-card-text>
           <v-form>
             <v-label>Nome do Prêmio</v-label>
-            <v-text-field solo v-model="prizes.name"></v-text-field>
+            <v-text-field
+              solo
+              v-model="prizes.name"
+              :rules="validateForm.required"
+            ></v-text-field>
             <v-label>Descrição</v-label>
-            <v-text-field solo v-model="prizes.description"></v-text-field>
+            <v-text-field
+              solo
+              v-model="prizes.description"
+              :rules="validateForm.required"
+            ></v-text-field>
             <v-label>Valor (em pontos)</v-label>
-            <v-text-field solo v-model="prizes.value"></v-text-field>
+            <v-text-field
+              solo
+              v-model="prizes.value"
+              :rules="validateForm.points"
+            ></v-text-field>
             <v-label>Imagem</v-label>
-            <v-text-field type="file" solo v-model="prizes.image"></v-text-field>
+            <v-file-input
+              :rules="validateForm.required"
+              v-model="prizes.image"
+              truncate-length="13"
+            ></v-file-input>
             <v-label>Status</v-label>
-            <v-text-field solo v-model="prizes.status"></v-text-field>
+            <v-checkbox
+              label="(Ativo / Inativo)"
+              hide-details
+              color="#4f8e44"
+              v-model="prizes.status"
+              :rules="validateForm.required"
+            ></v-checkbox>
           </v-form>
         </v-card-text>
 

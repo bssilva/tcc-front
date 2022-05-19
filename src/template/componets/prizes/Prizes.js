@@ -1,13 +1,20 @@
+import { validateForm, mask } from '../../../assets/js/Utils'
+
 export default {
   name: "Prizes",
   props: ["headersTable", "itemsTable"],
   data: () => ({
+    validateForm,
     dialog: false,
     prizes: {},
-    searchObject: []
+    searchObject: [],
+    status: {
+      ativo: true,
+      inativo: false
+    }
   }),
   async created(){
-    await this.API.prize.getPrize()
+    this.itemsTable = await this.API.prize.getPrize()
   },
   methods: {
     fillModal(){
