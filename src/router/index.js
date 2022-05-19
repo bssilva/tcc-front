@@ -54,12 +54,12 @@ const router = new VueRouter({
   routes,
 });
 
-// router.beforeEach(async (to, from, next) => {
-//   if (to.matched.some(record => record.meta.loged) && !localStorage.establishmentId) {
-//     next({ name: 'Login' })
-//     return;
-//   }
-//   next()
-// })
+router.beforeEach(async (to, from, next) => {
+  if (to.matched.some(record => record.meta.loged) && !localStorage.establishmentId) {
+    next({ name: 'Login' })
+    return;
+  }
+  next()
+})
 
 export default router;
