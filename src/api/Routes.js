@@ -22,4 +22,7 @@ export const routesApi = {
     getRedemptions: () => get("redemption"),
     postRedemption: (body) => post("redemption", { body })
   },
+  voucher: {
+    getVouchers: () => get("vouncher")
+  }
 };

@@ -3,7 +3,7 @@
     <div class="title-header">
       <h1>{{ title }}</h1>
     </div>
-    <div class="btn-header">
+    <div class="btn-header" v-if="nameButton">
       <v-btn @click="callback">{{ nameButton }}</v-btn>
     </div>
   </div>
