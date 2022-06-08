@@ -17,7 +17,6 @@ async function baseRequest(method, route, options) {
     delete headers["Content-Type"];
   } else body = options?.body ? JSON.stringify(options.body) : null;
 
-  console.log(body);
   const resp = await fetch(
     `${API_URL}${route}`,
     Object.assign(

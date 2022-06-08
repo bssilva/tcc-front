@@ -13,15 +13,6 @@ export default {
   }),
   async created(){
     this.prizes = await this.API.prize.getPrize()
-    this.itemsTable = await this.API.redemption.getRedemptions()
-    if(this.itemsTable.length > 0){
-      this.itemsTable.forEach(element => {
-        element.createdDate = new Date(element.createdDate).toLocaleDateString('pt-br')
-        element.value = element.value.toString().replace(".",",")
-        element.total = element.total.toString().replace(".",",")
-        element.quantity = Number(element.quantity)
-      })
-    }
   },
   watch: {
     redemption(newValue, oldValue) {

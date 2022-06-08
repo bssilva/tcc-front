@@ -1,6 +1,6 @@
 <template>
-  <div id="prize">
-    <Prizes
+  <div id="prize" v-if="!loading">
+    <Prizes 
       :headersTable="PrizesModelTable.headers"
       :itemsTable="PrizesModelTable.items"
     />

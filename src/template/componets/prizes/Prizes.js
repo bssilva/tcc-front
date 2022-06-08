@@ -13,9 +13,6 @@ export default {
       inativo: false
     }
   }),
-  async created(){
-    this.itemsTable = await this.API.prize.getPrize()
-  },
   methods: {
     fillModal(){
       this.dialog = !this.dialog

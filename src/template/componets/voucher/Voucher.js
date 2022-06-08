@@ -4,9 +4,6 @@ export default {
   data: () => ({
     searchObject: {}
   }),
-  async created(){
-    this.itemsTable = await this.API.voucher.getVouchers()
-  },
   methods: {
   }
 };

@@ -1,8 +1,8 @@
 <template>
-  <div id="redemption">
+  <div id="redemption" v-if="!loading">
     <Redemptions
       :headersTable="RedemptionsModelTable.headers"
-      :itemsTable="RedemptionsModelTable.items"
+      :itemsTable="redemptions.length > 0 ? redemptions : RedemptionsModelTable.items"
     />
   </div>
 </template>

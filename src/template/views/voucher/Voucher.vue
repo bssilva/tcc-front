@@ -1,8 +1,8 @@
 <template>
-  <div id="voucher">
+  <div id="voucher" v-if="!loading">
     <Voucher
       :headersTable="VoucherModelTable.headers"
-      :itemsTable="VoucherModelTable.items"
+      :itemsTable="vouchers.length > 0 ? vouchers : VoucherModelTable.items"
     />
   </div>
 </template>
