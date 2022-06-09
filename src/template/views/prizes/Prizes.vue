@@ -2,7 +2,7 @@
   <div id="prize" v-if="!loading">
     <Prizes 
       :headersTable="PrizesModelTable.headers"
-      :itemsTable="PrizesModelTable.items"
+      :itemsTable="prizes.length > 0 ? prizes : PrizesModelTable.items"
     />
   </div>
 </template>

@@ -4,6 +4,7 @@ const validateForm = {
     (v) => (!!v && !v?.includes(" ")) || "Informe somente o primeiro nome",
   ],
   points: [(v) => (!!v && v >= 0) || "Não é permitido pontos negativos"],
+  redemption: [(v) => (!!v && v >= 0) || "Não é permitido quantidade negativa"],
   email: [(v) => (!!v && /.+@.+\..+/.test(v)) || "E-mail inválido"],
   phone: [(v) => (!!v && v?.length == 14) || "Telefone inválido"],
   cellPhone: [(v) => (!!v && v?.length == 16) || "Celular inválido"],

@@ -33,7 +33,7 @@
               :items="prizes"
               item-text="name"
               item-value="_id"
-              v-model="redemption.descriptionPremium"
+              v-model="namePrizeRedemption"
               label="Selecionar"
               solo
             ></v-select>
@@ -47,7 +47,7 @@
             <v-text-field
               solo
               type="number"
-              :rules="validateForm.points"
+              :rules="validateForm.redemption"
               v-model="redemption.quantity"
             ></v-text-field>
             <div class="valor-total" v-if="redemption.quantity">

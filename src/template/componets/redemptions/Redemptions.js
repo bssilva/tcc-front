@@ -1,4 +1,4 @@
-import { validateForm, mask } from '../../../assets/js/Utils'
+import { validateForm, mask } from "../../../assets/js/Utils";
 
 export default {
   name: "Redemptions",
@@ -9,36 +9,35 @@ export default {
     dialog: false,
     redemption: {},
     searchObject: [],
-    prizes: []
+    prizes: [],
+    namePrizeRedemption: "",
   }),
-  async created(){
-    this.prizes = await this.API.prize.getPrize()
+  async created() {
+    this.prizes = await this.API.prize.getPrize();
   },
   watch: {
-    redemption(newValue, oldValue) {
-      if(newValue.descriptionPremium){
-        this.prizes.forEach(element => {
-          if(element._id == newValue.descriptionPremium){
-            this.redemption.value = element.value
-            this.namePrizeRedemption = element.name
-          }
-        })
-      }
-    }
+    namePrizeRedemption(newValue, oldValue) {
+      this.prizes.forEach((element) => {
+        if (element._id == newValue) {
+          this.redemption.value = element.value;
+          this.namePrizeRedemption = element;
+        }
+      });
+    },
   },
   methods: {
-    fillModal(){
-      this.dialog = !this.dialog
+    fillModal() {
+      this.dialog = !this.dialog;
     },
-    async insertRedemption(){
-      this.redemption.descriptionPremium = this.namePrizeRedemption
-      const resp = await this.API.redemption.postRedemption(this.redemption)
-      if(resp.status == 201){
-        this.$toasted.global.success({ msg: 'Resgate realizado com sucesso' });
+    async insertRedemption() {
+      this.redemption.descriptionPremium = this.namePrizeRedemption;
+      const resp = await this.API.redemption.postRedemption(this.redemption);
+      if (resp.status == 201) {
+        this.$toasted.global.success({ msg: "Resgate realizado com sucesso" });
         setTimeout(() => {
-          location.reload()
-        },800)
+          location.reload();
+        }, 800);
       }
-    }
-  }
+    },
+  },
 };

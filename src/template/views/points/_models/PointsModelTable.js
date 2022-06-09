@@ -8,10 +8,11 @@ export const PointsModelTable = {
   ],
   items: [
     {
+      name: "Exemplo de inserção",
       cpf: "123.456.789.09",
       value: 20,
-      createdDate: "x",
-      description: "Inserção manual",
+      createdDate: "10/05/2021",
+      description: "Exemplo de inserção de ponto",
     }
   ],
 };
